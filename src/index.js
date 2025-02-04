@@ -9,7 +9,13 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "http://192.168.0.109:3000", "https://mobily-new.vercel.app/"],
+    origin: [
+      "http://localhost:3000",
+      "http://192.168.0.109:3000",
+      "https://mobily-new.vercel.app/",
+      "https://mobily-backend.vercel.app"
+    ],
+    methods: ["GET", "POST"]
   },
 });
 
