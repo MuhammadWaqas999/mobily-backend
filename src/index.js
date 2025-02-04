@@ -9,8 +9,9 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*", // Allows all origins
-    methods: ["GET", "POST"], // Allow specific methods
+    origin: "*", // Allow all origins
+    methods: ["GET", "POST"], // Allow both GET and POST
+    credentials: true, // Allow cookies and auth headers
   },
 });
 
